@@ -1,0 +1,132 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: blue;
+}
+
+.container
+{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+
+    margin: 10px;
+}
+.item
+{
+    width: 40px;
+    height: 40px;
+
+    margin: 0;
+
+    position: relative;
+
+    background: white;
+    display: block;
+
+    border-radius: 50%;
+
+    margin: 20px 0;
+
+    box-shadow: 0px 5px 11px -2px rgba(0, 0, 0, 0.18), 
+    0px 4px 12px -7px rgba(0, 0, 0, 0.15);
+
+    transition: all .5s ease-in-out;
+}
+
+
+.item:active, 
+.item:focus, 
+.item:hover {
+
+    box-shadow: 2px 2px 3px black;
+}
+
+.item:not(:last-child)
+{
+    width: 35px;
+    height: 35px;
+
+    opacity: 0;
+
+    margin: 20px auto 0;
+
+    -webkit-transform: translateY(50px);
+      -ms-transform: translateY(50px);
+          transform: translateY(50px);
+}
+.container:hover 
+.item:not(:last-child)
+{
+    opacity: 1;
+
+    -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+
+    margin: 15px auto 0;
+}
+
+[tooltip]:hover:before{
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.item:nth-child(4)
+{
+    -webkit-transition-delay: 10ms;
+    transition-delay: 10ms;
+    background-image: url('https://cbwconline.com/IMG/Share.svg');
+    background-size: contain;
+}
+
+.item:nth-child(3)
+{
+    -webkit-transition-delay: 10ms;
+    transition-delay: 20ms;
+    
+    background-image: url('https://cbwconline.com/IMG/Google%20Plus.svg');
+    background-size: contain;
+}
+
+.item:nth-child(2)
+{
+    -webkit-transition-delay: 10ms;
+    transition-delay: 30ms;
+    background-image: url('https://cbwconline.com/IMG/Twitter-Flat.png');
+    background-size: contain;
+}
+
+.item:nth-child(1)
+{
+    -webkit-transition-delay: 10ms;
+    transition-delay: 40ms;
+    background-image: url('https://cbwconline.com/IMG/Facebook-Flat.png');
+    background-size: contain;
+}
+
+
+[tooltip]::before
+{
+    position: absolute;
+    right: 100%;
+    bottom: 25%;
+
+    border-radius: 2px;
+    background: #585858;
+    color: #fff;
+
+    padding: 5px;
+
+    margin-right: 10px;
+    
+    content: attr(tooltip);
+    text-decoration: none;
+
+    visibility: hidden;
+    opacity: 0;
+}
+
+
+
